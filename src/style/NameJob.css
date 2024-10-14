@@ -1,0 +1,53 @@
+
+
+.name {
+    display: inline-block; /* Ajuste la largeur du fond au texte */
+    font-size: clamp(2dvw,3dvw,9dvw);
+    margin: 0;
+    position: relative; /* Pour positionner le pseudo-élément */
+}
+
+.name::before {
+    content: ""; /* Nécessaire pour créer un pseudo-élément */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary); /* Couleur de fond */
+    z-index: -1; /* Positionner le fond derrière le texte */
+    animation: BGslideOut 0.2s ease-out forwards;
+
+}
+
+.name:hover::before {
+    animation: BGslideIn 0.2s ease-out forwards;
+}
+
+.job {
+    text-align: left;
+    font-size: clamp(5dvw,6dvw,7dvw);
+    margin: 0;
+    letter-spacing: 0.11rem;
+}
+
+
+/* Pour les écrans entre 600px et 1200px */
+@media (min-width: 600px) and (max-width: 1200px) {
+    .name {
+        font-size: clamp(4dvw,5dvw,6dvw); 
+    }
+    .job {
+        font-size: clamp(7dvw,8dvw,9dvw); 
+    }
+  
+}   
+
+@media (max-width: px) {
+    .name {
+        font-size: clamp(7dvw,8dvw,9dvw); 
+    }
+    .job {
+        font-size: clamp(10dvw,11dvw,12dvw); 
+    }
+  
+} 

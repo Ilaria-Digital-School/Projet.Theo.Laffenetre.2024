@@ -1,0 +1,39 @@
+.about-container {
+  display: flex; 
+  flex-wrap: wrap; 
+  flex-direction: row;
+  margin: 15dvw 5dvw 10dvw 5dvw;
+
+}
+
+.spline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 60%;
+    clip-path: (1dvw);
+  }
+
+.text-container {
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 40%;
+}
+
+
+/* Pour les écrans en dessous de 1200px */
+@media (max-width: 1200px) {
+  .about-container {
+    flex-direction: column;
+    margin: 10dvw 5dvw 10dvw 5dvw;
+  }
+
+  .spline-container {
+    margin: 5dvh 0;
+
+  }
+
+}

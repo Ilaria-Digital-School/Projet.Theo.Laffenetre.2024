@@ -1,0 +1,71 @@
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: grid;
+    background-color: var(--primary);
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr;    
+    place-items: center;
+    animation: fadeOut 0.5s ease-in;
+    animation-delay: 2.5s;
+    
+}
+ 
+.loader-element {
+    position: absolute;
+    width: 60px; 
+    height: 60px; 
+    border: 8px solid transparent; 
+    border-top: 8px solid var(--accent); 
+    border-bottom: 8px solid var(--background); 
+    border-radius: 50%; 
+    animation: spin 2s ease-in-out infinite; 
+}
+
+.loader-element-larger {
+    position: absolute;
+    width: 100px; 
+    height: 100px; 
+    border: 8px solid transparent; 
+    border-top: 8px solid var(--accent); 
+    border-bottom: 8px solid var(--background); 
+    border-radius: 50%; 
+    animation: spin 2s ease-in-out infinite;
+    animation-delay: 0.1s;
+}
+
+.loader-element-largerer {
+  position: absolute;
+  width: 140px; 
+  height: 140px; 
+  border: 8px solid transparent; 
+  border-top: 8px solid var(--accent); 
+  border-bottom: 8px solid var(--background); 
+  border-radius: 50%; 
+  animation: spin 2s ease-in-out infinite;
+  animation-delay: 0.2s; 
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+
+
+

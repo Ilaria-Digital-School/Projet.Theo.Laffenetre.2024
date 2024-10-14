@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.titre {
+
+  font-size: 2rem;
+}
+
+/* Masquer le contenu de la page tant que le chargement est en cours */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+/* Conteneur général de l'application */
+.app-container {
+  position: relative;
+  
+}
+
+/* Contenu de la page */
+.page-content {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Loader pour le surimposer */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Effet de transition pour afficher progressivement le contenu */
+.page-content:not(.hidden) {
+  opacity: 1;
+}

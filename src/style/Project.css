@@ -1,0 +1,197 @@
+.project-template {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-header > img {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+    
+}
+
+.separater {
+    background-color: var(--primary);
+    height: 40vh;
+    width: 100vw;
+}
+
+.text-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80%;
+    margin: 20vh 0;
+    
+}
+
+.text-container > h1 {
+    font-size: clamp(3rem, 10dvw, 8rem);
+    margin: 0;
+}
+
+.text-container > p {
+    font-size: clamp(1rem, 1.5dvw, 4rem);
+    line-height: 3vw;
+    margin-top: 3vw;
+}
+
+  
+.image-grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5vh;
+    place-items: center;
+
+    
+}
+  
+.image-item img {
+    max-height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2vw;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-item img:hover {
+    transform: scale(1.05); /* Légère mise en avant au survol */
+  }
+
+  
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.video-container {
+    width: 80%;
+    height: auto;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 56.25%; /* Pour un ratio 16:9 (9/16 = 0.5625) */
+    overflow: hidden;
+}
+
+.video-container > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Style pour la modale */
+
+.cache {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.9;
+  z-index: 999; /* Juste en dessous de la modale */
+}
+
+
+.modal {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    transition: all 0.3s ease; /* Ajoute une transition pour rendre le mouvement plus fluide */
+    gap: 1dvw;
+  }
+  
+
+
+.modal-content {
+    max-height: 100%;
+    max-width: 90%;
+    object-fit: contain;
+    pointer-events: all;
+    transition: transform 0.3s ease; /* Pour un effet fluide lors du zoom */
+    overflow: scroll;
+}
+
+.close-modal {
+    position: absolute;
+    top: 5vh;
+    right: 3vw;
+    width: 40px; /* Largeur du bouton */
+    height: 40px; /* Hauteur du bouton, doit être égale à la largeur pour créer un cercle */
+    font-size: 36px;
+    color: var(--background);
+    cursor: pointer;
+    z-index: 1001;
+    background-color: var(--primary);
+    border-radius: 50%; /* Pour créer un cercle */
+    display: flex; /* Centrer le contenu */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    transition: scale 0.2s ease;
+}
+
+
+.img-button {
+    
+    border: none;
+    padding: 10px;
+    z-index: 1001;
+    background: none;
+}
+
+.img-button img {
+    height: 2dvw;
+    width: auto;
+    transition: scale 0.2s ease;
+    cursor: pointer;
+}
+
+.img-button img:hover {
+    scale: 1.1;
+}
+
+.disabled {
+    opacity: 0.5; /* Rendre le bouton désactivé plus clair */
+    cursor: auto;
+    pointer-events: none;
+    
+}
+  
+
+
+.no-scroll {
+    overflow: hidden;
+  }
+  
+@media (max-width: 768px) {
+    .text-container {
+        margin: 10vh 0;
+    }
+    .text-container > p {
+        line-height: 5vw;
+    }
+    .separater {
+        height: 20vh;
+    }
+    }
+  

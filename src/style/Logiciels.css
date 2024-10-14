@@ -1,0 +1,58 @@
+.icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(8px, 20px, 30px);
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20vh;
+}
+
+.icon {
+    flex: 0 0 auto; /* Empêche les icônes de se redimensionner automatiquement */
+    
+}
+
+.icon img {
+    width: clamp(40px, 90px, 130px); 
+    height: clamp(40px, 90px, 130px);
+    object-fit: contain; /* Assure que l'image garde ses proportions */
+    filter: grayscale(100%);
+    
+    
+}
+
+
+
+
+.titre {
+    font-size: clamp(2rem, 5dvw, 4rem);
+    display: inline-block; /* Ajuste la largeur du fond au texte */
+    position: relative; /* Pour positionner le pseudo-élément */  
+
+}
+
+.titre::before {
+    content: ""; /* Nécessaire pour créer un pseudo-élément */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary); /* Couleur de fond */
+    z-index: -1; /* Positionner le fond derrière le texte */
+    animation: BGslideOut 0.2s ease-out forwards;
+
+}
+
+.titre:hover::before {
+    animation: BGslideIn 0.2s ease-out forwards;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6dvw 0dvw;
+    gap: 3dvw;
+}

@@ -1,0 +1,76 @@
+.description-container {
+    background-color: var(--background);
+    padding: 2dvw 10dvw;
+}
+
+.description-container > p {
+    font-size: 1.2rem;
+    color: var(--text);
+    text-align: justify;
+    line-height: 1.2;
+    font-weight: 500;
+
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5dvw;
+    justify-content: center;
+    align-items: stretch;
+    margin: 20dvh 0;
+
+}
+
+.description-text {
+    flex-basis: 50%;
+    font-size: clamp(1.5rem,4dvw,5rem);
+    font-weight: 500;
+    flex-grow: 1; /* Ils grandissent proportionnellement */
+    flex-shrink: 1; /* Ils rétrécissent également si nécessaire */
+
+}
+
+.right {
+    text-align: right;
+}
+
+.description-anim {
+    flex-basis: 50%;
+    flex-grow: 1; /* Ils grandissent proportionnellement */
+    flex-shrink: 1; /* Ils rétrécissent également si nécessaire */
+}
+
+.span-anim {
+    display: inline-flex; /* Les lettres se comporteront comme un bloc */
+    flex-wrap: nowrap;
+    transform-style: preserve-3d;
+}
+
+
+/* Pour les écrans entre 600px et 1200px */
+@media (min-width: 800px) and (max-width: 1200px) {
+    .description-text {
+        font-size: clamp(2rem,3dvw,4rem); 
+    }
+    
+  
+}   
+
+@media (max-width: 800px) {
+    .flex-container {
+        flex-wrap: wrap;
+        margin: 10dvh 0;
+    }
+
+    .description-anim {
+        
+        height: 30vh;
+        overflow: hidden;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+} 

@@ -1,0 +1,12 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary);
+    z-index: 1000; /* S'assurer qu'il soit au-dessus des autres éléments */
+    pointer-events: none; /* Ne bloque pas les interactions */
+    opacity: 0; /* Masquer l'overlay au début */
+  }
+  

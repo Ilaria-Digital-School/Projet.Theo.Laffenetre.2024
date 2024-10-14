@@ -1,0 +1,27 @@
+footer {
+
+    padding: 5vh;
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vh;
+    margin-top: 15dvw;
+    
+}
+
+p {
+    margin: 0;
+}
+
+.footer-droits {
+    font-size: 1.5rem;    
+
+}
+
+
+.footer-info {
+    font-size: 1rem;    
+    font-style: italic;
+}

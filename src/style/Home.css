@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+/* Déclaration des couleurs */
+:root {
+  --text: #05020d;
+  --background: #fbfbfe;
+  --primary: #4b2edc;
+  --secondary: #ea85d1;
+  --accent: #e45e84;
+
+  --linearPrimarySecondary: linear-gradient(#4b2edc, #ea85d1);
+  --linearPrimaryAccent: linear-gradient(#4b2edc, #e45e84);
+  --linearSecondaryAccent: linear-gradient(#ea85d1, #e45e84);
+  --radialPrimarySecondary: radial-gradient(#4b2edc, #ea85d1);
+  --radialPrimaryAccent: radial-gradient(#4b2edc, #e45e84);
+  --radialSecondaryAccent: radial-gradient(#ea85d1, #e45e84);
+
+
+}
+
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

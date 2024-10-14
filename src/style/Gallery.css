@@ -1,0 +1,49 @@
+.titre {
+    font-size: clamp(2rem, 5dvw, 4rem);
+    display: inline-block; /* Ajuste la largeur du fond au texte */
+    position: relative; /* Pour positionner le pseudo-élément */  
+
+}
+
+.titre::before {
+    content: ""; /* Nécessaire pour créer un pseudo-élément */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary); /* Couleur de fond */
+    z-index: -1; /* Positionner le fond derrière le texte */
+    animation: BGslideOut 0.2s ease-out forwards;
+
+}
+
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+/*.gallery-wrapper {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+
+
+.gallery-item {
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #e0e0e0;
+    border-right: 1px solid #ccc;
+  }
+
+*/

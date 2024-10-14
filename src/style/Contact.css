@@ -1,0 +1,79 @@
+.contact-section {
+    position: relative;
+    display: grid;
+    place-items: center; 
+    
+  }
+
+.contact-container {
+    background-color: var(--background);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 1vw;
+    z-index: 2; 
+    padding: clamp(10px, 5dvw, 40px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease;
+
+}
+
+.contact-container:hover {
+    box-shadow: rgba(75, 46, 220, 0.2) 0px 7px 60px 0px;
+    }
+
+.paper-plane {
+    z-index: 1; /* Place l'animation derrière */
+    pointer-events: none; /* Empêche l'animation d'interférer avec les interactions */
+    width: 100%;
+    height: 100%;   
+
+}
+
+.contact-container,
+.paper-plane {
+  grid-area: 1 / 1; 
+}
+  
+.titre {
+    font-size: clamp(1.5rem, 5dvw, 4rem);
+    display: inline-block; /* Ajuste la largeur du fond au texte */
+    position: relative; /* Pour positionner le pseudo-élément */  
+
+}
+
+.titre::before {
+    content: ""; /* Nécessaire pour créer un pseudo-élément */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary); /* Couleur de fond */
+    z-index: -1; /* Positionner le fond derrière le texte */
+    animation: BGslideOut 0.2s ease-out forwards;
+
+}
+
+
+.contact-text {
+    font-size: clamp(0.9rem, 4vw, 2rem);
+    color: var(--text);
+    font-weight: 500;
+    line-height: clamp(1rem, 4vw, 3rem);
+}
+  
+.contact-email {
+    font-size: clamp(1.2rem, 4vw, 3rem);
+    color: #4b2edc;
+    margin: 4vh 0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+  
+.contact-email:hover {
+    color: var(--accent);
+}
+ 

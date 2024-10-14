@@ -1,0 +1,18 @@
+/* Animation de background pour les titres */
+@keyframes BGslideIn {
+    from {
+        height: 20%;
+    }
+    to {
+        height: 50%;
+    }
+}
+
+@keyframes BGslideOut {
+    from {
+        height: 50%;
+    }
+    to {
+        height: 20%;
+    }
+}
