@@ -2,7 +2,7 @@
   display: flex; 
   flex-wrap: wrap; 
   flex-direction: row;
-  margin: 15dvw 5dvw 10dvw 5dvw;
+  margin: 15dvw 0dvw 10dvw 5dvw;
   justify-content: center;
   align-items: center;
 
@@ -35,7 +35,7 @@
 @media (min-width: 800px) and (max-width: 1200px) {
   .about-container {
     flex-direction: column;
-    margin: 15dvw 5dvw 10dvw 5dvw;
+    margin: 15dvw 0dvw 10dvw 5dvw;
   }
 
   .spline-container {
