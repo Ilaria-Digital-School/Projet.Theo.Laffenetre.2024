@@ -3,6 +3,7 @@ import Spline from '@splinetool/react-spline';
 import styled from 'styled-components';
 // import { useLoading } from '../LoadingContext';
 
+
 const StyledSpline = styled(Spline)`
   display: flex;
   justify-content: center;

@@ -1,6 +1,8 @@
 .description-container {
     background-color: var(--background);
     padding: 2dvw 10dvw;
+    display: flex;
+    flex-direction: column;
 }
 
 .description-container > p {
@@ -9,6 +11,7 @@
     text-align: justify;
     line-height: 1.2;
     font-weight: 500;
+    
 
 }
 
@@ -25,7 +28,7 @@
 
 .description-text {
     flex-basis: 50%;
-    font-size: clamp(1.5rem,4dvw,5rem);
+    font-size: clamp(2rem,6dvw,4rem);
     font-weight: 500;
     flex-grow: 1; /* Ils grandissent proportionnellement */
     flex-shrink: 1; /* Ils rétrécissent également si nécessaire */
@@ -50,13 +53,7 @@
 
 
 /* Pour les écrans entre 600px et 1200px */
-@media (min-width: 800px) and (max-width: 1200px) {
-    .description-text {
-        font-size: clamp(2rem,3dvw,4rem); 
-    }
-    
-  
-}   
+ 
 
 @media (max-width: 800px) {
     .flex-container {
@@ -73,4 +70,7 @@
     .reverse {
         flex-direction: column-reverse;
     }
+
+
+    
 } 

@@ -39,11 +39,11 @@ function MagneticGrid() {
   }, []);  
 
   return (
-    
-      <Spline 
-        scene="https://prod.spline.design/T-WXpoGYemcUi3Nr/scene.splinecode" 
-        ref = {spline}
-      />
+  
+        <Spline
+          scene="https://prod.spline.design/T-WXpoGYemcUi3Nr/scene.splinecode" 
+          ref = {spline}
+        />
     
   );
 }

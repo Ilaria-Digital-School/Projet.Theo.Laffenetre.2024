@@ -2,7 +2,7 @@
 
 .name {
     display: inline-block; /* Ajuste la largeur du fond au texte */
-    font-size: clamp(2dvw,3dvw,9dvw);
+    font-size: clamp(2rem,4dvw,6rem);
     margin: 0;
     position: relative; /* Pour positionner le pseudo-élément */
 }
@@ -25,29 +25,22 @@
 
 .job {
     text-align: left;
-    font-size: clamp(5dvw,6dvw,7dvw);
+    font-size: clamp(3rem,7dvw,7rem);
     margin: 0;
     letter-spacing: 0.11rem;
+    white-space: nowrap;
 }
 
-
-/* Pour les écrans entre 600px et 1200px */
-@media (min-width: 600px) and (max-width: 1200px) {
-    .name {
-        font-size: clamp(4dvw,5dvw,6dvw); 
-    }
+@media (max-width: 800px) {
     .job {
-        font-size: clamp(7dvw,8dvw,9dvw); 
+        font-size: clamp(2rem,10dvw,8rem);
+        
+    }
+    .name {
+        font-size: clamp(4rem,9dvw,9rem);
+        line-height: clamp(4rem,9dvw,9rem);
     }
   
-}   
+  }
 
-@media (max-width: px) {
-    .name {
-        font-size: clamp(7dvw,8dvw,9dvw); 
-    }
-    .job {
-        font-size: clamp(10dvw,11dvw,12dvw); 
-    }
-  
-} 
+

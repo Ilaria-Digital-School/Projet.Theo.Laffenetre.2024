@@ -3,6 +3,8 @@
   flex-wrap: wrap; 
   flex-direction: row;
   margin: 15dvw 5dvw 10dvw 5dvw;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -14,21 +16,26 @@
     clip-path: (1dvw);
   }
 
-.text-container {
+.nameJob-container {
   
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-basis: 40%;
 }
+.name-container {
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
 
-/* Pour les écrans en dessous de 1200px */
-@media (max-width: 1200px) {
+@media (min-width: 800px) and (max-width: 1200px) {
   .about-container {
     flex-direction: column;
-    margin: 10dvw 5dvw 10dvw 5dvw;
+    margin: 15dvw 5dvw 10dvw 5dvw;
   }
 
   .spline-container {
@@ -37,3 +44,19 @@
   }
 
 }
+
+@media (max-width: 800px) {
+  .about-container {
+    margin: 20dvw;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .about-container {
+    margin: 15dvh;
+  }
+
+}
+
+
