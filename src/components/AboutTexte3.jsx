@@ -112,11 +112,11 @@ function AboutTexte3() {
             switch (anim) {
                 
                 case 'up':
-                    tl.to(span, { y: -25, duration: 0.4, ease: 'power3.out' });
+                    tl.to(span, { y: -25, duration: 0.4, ease: 'power2.out' });
                     break;
 
                 case 'down':
-                    tl.to(span, { y: 25, duration: 0.4, ease: 'power3.out' });
+                    tl.to(span, { y: 25, duration: 0.4, ease: 'power2.out' });
                     break;
                 
                 default:
