@@ -189,7 +189,7 @@ function AboutTexte3() {
             <p>
             Mon ambition est d'offrir des
             <span className='span-anim'>
-                    {splitTextToSpans('expériences ', spansExperience)} 
+                    {splitTextToSpans(' expériences ', spansExperience)} 
             </span>
             <span className='span-anim'>
                     {splitTextToSpans('numériques ', spansNumerique)} 
