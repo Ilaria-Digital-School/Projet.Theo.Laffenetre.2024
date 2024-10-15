@@ -76,6 +76,8 @@
     margin-top: 40px;
 }
 
+ 
+
 .video-container {
     width: 80%;
     height: auto;
@@ -113,7 +115,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    z-index: 1000;
     height: 100vh;
     width: 100vw;
     padding: 20px;
@@ -128,7 +129,7 @@
     max-width: 90%;
     object-fit: contain;
     pointer-events: all;
-    transition: transform 0.3s ease; /* Pour un effet fluide lors du zoom */
+    transition: transform 0.3s ease;
     overflow: scroll;
 }
 
@@ -136,17 +137,16 @@
     position: absolute;
     top: 5vh;
     right: 3vw;
-    width: 40px; /* Largeur du bouton */
-    height: 40px; /* Hauteur du bouton, doit être égale à la largeur pour créer un cercle */
+    width: 40px; 
+    height: 40px; 
     font-size: 36px;
     color: var(--background);
     cursor: pointer;
-    z-index: 1001;
     background-color: var(--primary);
-    border-radius: 50%; /* Pour créer un cercle */
-    display: flex; /* Centrer le contenu */
-    align-items: center; /* Centrer verticalement */
-    justify-content: center; /* Centrer horizontalement */
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
     transition: scale 0.2s ease;
 }
 
@@ -171,27 +171,44 @@
 }
 
 .disabled {
-    opacity: 0.5; /* Rendre le bouton désactivé plus clair */
+    opacity: 0.5;
     cursor: auto;
     pointer-events: none;
     
 }
   
-
-
 .no-scroll {
     overflow: hidden;
   }
   
-@media (max-width: 768px) {
+
+@media (max-width: 800px) {
     .text-container {
         margin: 10vh 0;
     }
     .text-container > p {
-        line-height: 5vw;
+        line-height: 7vw;
     }
     .separater {
-        height: 20vh;
+        height: 10vh;
     }
+    .project-header > img {
+        height: 75vh;
+        object-fit: cover;
+        
+    }
+    .close-modal {
+        top: 6vh;
+        right: 6vw;
+        width: 20px;
+        height: 20px; 
+        font-size: 18px;
+        
+    }
+    .img-button img {
+        height: 4dvw;
+        
+    }
+   
 }
   

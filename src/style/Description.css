@@ -28,7 +28,7 @@
 
 .description-text {
     flex-basis: 50%;
-    font-size: clamp(2rem,6dvw,4rem);
+    font-size: clamp(1.8rem,6dvw,4rem);
     font-weight: 500;
     flex-grow: 1; /* Ils grandissent proportionnellement */
     flex-shrink: 1; /* Ils rétrécissent également si nécessaire */
@@ -58,7 +58,7 @@
 @media (max-width: 800px) {
     .flex-container {
         flex-wrap: wrap;
-        margin: 10dvh 0;
+        margin: 8dvh 0;
     }
 
     .description-anim {

@@ -97,7 +97,7 @@ function Project() {
                 src={imgSrc}
                 alt={`${index + 1}`}
                 loading='lazy'
-                onClick={() => openModal(imgSrc)} // Clique pour ouvrir la modale
+                onClick={() => openModal(imgSrc)}
               />
             </div>
           ))}

@@ -21,7 +21,7 @@ const PageTransition = ({ children }) => {
               });
   
               // Animation d'entrée
-              tl.set(node, { autoAlpha: 0, y: -300 }) // Positionner la nouvelle page hors du viewport à droite
+              tl.set(node, { autoAlpha: 0, y: 300 }) // Positionner la nouvelle page hors du viewport à droite
                 .to(overlayRef.current, { autoAlpha: 1, duration: 0.3, ease: "power1.inOut" }) // Afficher l'overlay
                 .to(node, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power1.inOut" });
             }}

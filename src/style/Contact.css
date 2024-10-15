@@ -77,3 +77,11 @@
     color: var(--accent);
 }
  
+@media (max-width: 800px) {
+    .contact-section {
+        margin: 15dvh 0;
+        
+      }
+
+    
+} 

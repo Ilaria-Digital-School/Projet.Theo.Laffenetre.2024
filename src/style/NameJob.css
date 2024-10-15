@@ -33,7 +33,7 @@
 
 @media (max-width: 800px) {
     .job {
-        font-size: clamp(2rem,10dvw,8rem);
+        font-size: clamp(3rem,10dvw,8rem);
         
     }
     .name {
