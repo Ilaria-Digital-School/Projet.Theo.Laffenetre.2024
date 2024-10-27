@@ -5,13 +5,18 @@ import { galleryCards } from '../../assets/BDI.js';
 import LeftArrow from '../../assets/SVG/LeftArrow.svg'
 import RightArrow from '../../assets/SVG/RightArrow.svg'
 
+// Composant fonction dynamique poyur l'affichage des pages projets
+
 function Project() {
   const { id } = useParams(); 
   const navigate = useNavigate(); 
-  const projet = galleryCards.find((project) => project.id === parseInt(id));
+  const projet = galleryCards.find((project) => project.id === parseInt(id)); // On utilise useParams pour obtenir l'id du projet, en fonction de cet id la page affiché changera
 
+  // Constantes pour gérer l'affichage de modales
   const [selectedImage, setSelectedImage] = useState(null);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+  
+  // Constantes pour gérer l'effet de zoom sur les modales
   const [zoomLevel, setZoomLevel] = useState(1);
   const [zoomOrigin, setZoomOrigin] = useState({ x: 0, y: 0 });
 
@@ -22,6 +27,7 @@ function Project() {
   const currentIndex = galleryCards.findIndex((project) => project.id === parseInt(id));
   const selectedImageIndex = projet.img.indexOf(selectedImage);
 
+  // Calcul pour l'ouverture de la modale
   const openModal = (imgSrc) => {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
@@ -57,6 +63,7 @@ function Project() {
     
   };
 
+  // Fonction pour changer l'image sélectionnée
   const handleNextImage = () => {
     const nextIndex = selectedImageIndex === projet.img.length - 1 ? 0 : selectedImageIndex + 1;
     setSelectedImage(projet.img[nextIndex]);
@@ -69,6 +76,7 @@ function Project() {
     navigate(`/project/${galleryCards[previousIndex].id}`);
   };
 
+  // Fonction pour changer de projet
   const handleNext = () => {
     const nextIndex = (currentIndex === galleryCards.length - 1) ? 0 : currentIndex + 1;
     navigate(`/project/${galleryCards[nextIndex].id}`);
@@ -154,7 +162,7 @@ function Project() {
               cursor: zoomLevel > 1 ? 'zoom-out' : 'zoom-in',
               transformOrigin: `${zoomOrigin.x}px ${zoomOrigin.y}px` // Utilisez la position de zoom
             }}
-            onClick={toggleZoom} // Toggle zoom sur clic
+            onClick={toggleZoom}
           />
 
           {/* Bouton suivant */}

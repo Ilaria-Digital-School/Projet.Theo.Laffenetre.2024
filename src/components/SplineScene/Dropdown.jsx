@@ -18,7 +18,7 @@ function Dropdown() {
 
   useGSAP(() => {
 
-    // Créer la timeline pour les animations
+    // Timeline pour les animations
     const tl = gsap.timeline({
         scrollTrigger: {
         trigger: spline.current,

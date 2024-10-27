@@ -67,7 +67,7 @@ function Cartes() {
         // Rétablir le gradient de base
         setGradients(prev => {
             const updated = [...prev];
-            updated[index] = 'linear-gradient(#fbfbfe, #fbfbfe)'; // Rétablir le gradient de base
+            updated[index] = 'linear-gradient(#fbfbfe, #fbfbfe)';
             return updated;
         });
     };
@@ -76,8 +76,8 @@ function Cartes() {
         const card = cardRefs.current[index];
         const { clientX, clientY } = e;
         const { left, top, width, height } = card.getBoundingClientRect();
-        const x = (clientX - left) / width; // Normaliser entre 0 et 1
-        const y = (clientY - top) / height; // Normaliser entre 0 et 1
+        const x = (clientX - left) / width; 
+        const y = (clientY - top) / height; 
 
         gsap.to(card, {
             rotateY: (x - 0.5) * 30,

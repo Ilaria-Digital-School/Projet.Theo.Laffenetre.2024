@@ -5,8 +5,8 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Fait défiler vers le haut de la page
-  }, [pathname]); // Déclenche lorsque le chemin change
+    window.scrollTo(0, 0); 
+  }, [pathname]); 
 
   return null;
 };

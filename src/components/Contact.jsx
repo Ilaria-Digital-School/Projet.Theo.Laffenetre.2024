@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(useGSAP);
 
-// Composant fonction qui représente la section contact
+
 function Contact() {
   
   const container = useRef();

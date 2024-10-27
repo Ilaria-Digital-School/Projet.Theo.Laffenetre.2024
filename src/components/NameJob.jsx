@@ -1,8 +1,6 @@
 import { useRef } from 'react';
 import '../style/NameJob.css';
 import '../style/Animations.css';
-
-// Importation des éléments nécéssaires au fonctionnement de GSAP
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(useGSAP);
@@ -10,7 +8,6 @@ gsap.registerPlugin(useGSAP);
 
 function NameJob() {
     
-    // Référence au conteneur
     const container = useRef();
   
     useGSAP(() => {

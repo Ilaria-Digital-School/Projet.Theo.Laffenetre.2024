@@ -3,7 +3,7 @@
     grid-template-columns: repeat(4, 1fr); 
     justify-items: center; 
     width: 80%;
-    gap: 4vw; 
+    gap: clamp(6rem, 5dvw, 10rem);
     margin: 5dvh 0;
 }
 

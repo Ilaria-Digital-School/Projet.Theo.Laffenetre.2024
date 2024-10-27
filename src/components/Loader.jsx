@@ -10,20 +10,20 @@ function Loader() {
 
   useGSAP(() => {
 
-    const tl = gsap.timeline({ repeat: -1 }); // Créer une timeline qui se répète indéfiniment
+    const tl = gsap.timeline({ repeat: -1 }); // Timeline qui se répète indéfiniment
 
     // Appliquer l'animation à chaque loader element avec un décalage
     loaderRefs.current.forEach((el, index) => {
       tl.to(el, {
-        rotation: 360, // Rotation complète
-        duration: 1.5, // Durée de la rotation
+        rotation: 360,
+        duration: 1.5, 
         ease: 'power4.inOut',
         delay: index * 0.3 // Délais d'animation pour créer un offset
       });
     });
 
     return () => {
-      tl.kill(); // Nettoyer l'animation lorsque le composant est démonté
+      tl.kill();
     };
   }, []);
 

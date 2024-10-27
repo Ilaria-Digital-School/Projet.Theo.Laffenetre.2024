@@ -2,7 +2,7 @@ import React from 'react';
 import '../style/Footer.css'
 import ArrowUp from './ArrowUp';
 
-// Composant fonction qui représente le Footer
+
 function Footer() {
 
   return (

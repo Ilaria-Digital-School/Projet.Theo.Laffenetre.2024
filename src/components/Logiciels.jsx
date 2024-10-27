@@ -9,10 +9,10 @@ gsap.registerPlugin(useGSAP);
 
 function Logiciels() {
 
-    // Référence au conteneur
+    
     const container = useRef(null);
 
-    // Utilisation de useEffect pour lancer l'animation après le rendu
+    
     useGSAP(() => {
 
         const icons = container.current.querySelectorAll('img');
@@ -78,7 +78,7 @@ function Logiciels() {
         );
 
         
-        // Créer une animation au survol des icônes
+        // Animation au survol des icônes
         icons.forEach((icon) => {
             icon.addEventListener('mouseenter', () => {
                 gsap.to(icon, {

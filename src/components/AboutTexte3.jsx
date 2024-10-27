@@ -169,12 +169,12 @@ function AboutTexte3() {
     const splitTextToSpans = (text, ref) => {
         return text.split('').map((char, index) => {
             if (char === ' ') {
-                return <span key={index} style={{ display: 'inline-block' }}>&nbsp;</span>; // Espace entre les lettres
+                return <span key={index} style={{ display: 'inline-block' }}>&nbsp;</span>; 
             } else {
                 return (
                     <span 
                         key={index} 
-                        ref={(el) => (ref.current[index] = el)} // Référence pour chaque lettre
+                        ref={(el) => (ref.current[index] = el)} 
                         style={{ display: 'inline-block' }} 
                     >
                         {char}
